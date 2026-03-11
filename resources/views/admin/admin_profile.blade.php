@@ -8,6 +8,7 @@
 
 @section('page_content')
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
       <div class="container-xxl">
                         <div class="py-3 d-flex align-items-sm-center flex-sm-row flex-column">
                             <div class="flex-grow-1">
@@ -203,16 +204,14 @@
                     </div> 
 
                     <script type="text/javascript">
-    
-    $(document).ready(function(){
-        $('#image').change(function(e){
-            var reader = new FileReader();
-            reader.onload = function(e){
-                $('#showImage').attr('src',e.target.result);
-            }
-            reader.readAsDataURL(e.target.files['0']);
-        });
-    });
-
-</script>
+                        $(document).ready(function(){
+                            $('#image').change(function(e){
+                                var reader = new FileReader();
+                                reader.onload = function(e){
+                                    $('#showImage').attr('src',e.target.result);
+                                }
+                                reader.readAsDataURL(e.target.files['0']);
+                            });
+                        });
+                    </script>
 @endsection

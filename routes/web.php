@@ -2,6 +2,8 @@
 
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\AdminController;
+// use App\Http\Controllers\Admin\BrandController;
+use App\Http\Controllers\Admin\BrandController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -32,4 +34,14 @@ Route::middleware('auth')->group(function () {
     Route::post('/change/password', [AdminController::class,'ChangePassword'])->name('change.password');
     Route::post('/update/password', [AdminController::class,'UpdatePassword'])->name('update.password');
    
+});
+
+// Brand Route 
+Route::middleware('auth')->group(function () {
+   Route::controller(BrandController::class)->group(function (){
+    Route::get('/all/brand', 'AllBrand')->name('all.brand');
+    Route::get('/add/brand', 'AddBrand')->name('add.brand');
+    Route::post('/store/brand', 'StoreBrand')->name('store.brand');
+   
+});
 });
