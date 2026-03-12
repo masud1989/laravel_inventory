@@ -4,6 +4,7 @@ use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\AdminController;
 // use App\Http\Controllers\Admin\BrandController;
 use App\Http\Controllers\Admin\BrandController;
+use App\Http\Controllers\Admin\WarehouseController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -25,7 +26,7 @@ require __DIR__.'/auth.php';
 
 
 // Admin Route 
- Route::get('/admin/logout', [AdminController::class, 'AdminLogout'])->name('admin.logout');
+Route::get('/admin/logout', [AdminController::class, 'AdminLogout'])->name('admin.logout');
 
 Route::middleware('auth')->group(function () {
     Route::get('/admin/profile', [AdminController::class, 'AdminProfile'])->name('admin.profile');
@@ -37,7 +38,7 @@ Route::middleware('auth')->group(function () {
 
 // Brand Route 
 Route::middleware('auth')->group(function () {
-   Route::controller(BrandController::class)->group(function (){
+    Route::controller(BrandController::class)->group(function (){
     Route::get('/all/brand', 'AllBrand')->name('all.brand');
     Route::get('/add/brand', 'AddBrand')->name('add.brand');
     Route::post('/store/brand', 'StoreBrand')->name('store.brand');
@@ -46,5 +47,19 @@ Route::middleware('auth')->group(function () {
     Route::get('/delete/brand/{id}', 'DeleteBrand')->name('delete.brand');  
 });
 
+
+});
+
+
+// WareHouse Route 
+Route::middleware('auth')->group(function () {
+    Route::controller(WarehouseController::class)->group(function (){
+    Route::get('/all/warehouse', 'AllWarehouse')->name('all.warehouse');
+    Route::get('/add/warehouse', 'AddWarehouse')->name('add.warehouse');
+    Route::post('/store/warehouse', 'StoreWarehouse')->name('store.warehouse');
+    Route::get('/edit/warehouse/{id}', 'EditWarehouse')->name('edit.warehouse');
+    Route::post('/update/warehouse', 'UpdateWarehouse')->name('update.warehouse');
+    Route::get('/delete/warehouse/{id}', 'DeleteWarehouse')->name('delete.warehouse');  
+});
 
 });

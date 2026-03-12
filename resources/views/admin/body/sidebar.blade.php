@@ -47,7 +47,7 @@
                             <li>
                                 <a href="#sidebarAuth" data-bs-toggle="collapse">
                                     <i data-feather="users"></i>
-                                    <span> Brand Management </span>
+                                    <span>Manage Brand </span>
                                     <span class="menu-arrow"></span>
                                 </a>
                                 <div class="collapse" id="sidebarAuth">
@@ -62,11 +62,40 @@
                                     </ul>
                                 </div>
                             </li>
+{{-- 
+                                <li>
+                                    <a href="#sidebarAuth" data-bs-toggle="collapse">
+                                        <i data-feather="users"></i>
+                                        <span> Warehouse Management </span>
+                                        <span class="menu-arrow"></span>
+                                    </a>
+                                    <div class="collapse" id="sidebarAuth">
+                                        <ul class="nav-second-level">
+                                            <li>
+                                                <a href="{{ route('all.warehouse') }}" class="tp-link">All Warehouse</a>
+                                                {{-- <a href="{{ route('all.brand') }}" class="tp-link">All Brand</a> --}}
+                                            {{--
+                                            </li>
+                                            <li>
+                                                <a href="{{ route('add.warehouse') }}" class="tp-link">Add New Warehouse</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+
+                                 --}}
+
+                                 <li>
+                                <a href="{{ route('all.warehouse') }}" class="tp-link">
+                                    <i data-feather="calendar"></i>
+                                    <span> Manage Warehouse</span>
+                                </a>
+                            </li>
 
                             <li>
                                 <a href="#sidebarError" data-bs-toggle="collapse">
                                     <i data-feather="alert-octagon"></i>
-                                    <span> Error Pages </span>
+                                    <span> Error Page</span>
                                     <span class="menu-arrow"></span>
                                 </a>
                                 <div class="collapse" id="sidebarError">
@@ -80,6 +109,8 @@
                                     </ul>
                                 </div>
                             </li>
+
+                            
 
                             <li>
                                 <a href="#sidebarExpages" data-bs-toggle="collapse">
