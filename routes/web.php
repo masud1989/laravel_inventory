@@ -5,6 +5,7 @@ use App\Http\Controllers\AdminController;
 // use App\Http\Controllers\Admin\BrandController;
 use App\Http\Controllers\Admin\BrandController;
 use App\Http\Controllers\Admin\WarehouseController;
+use App\Http\Controllers\Admin\SupplierController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -62,4 +63,14 @@ Route::middleware('auth')->group(function () {
     Route::get('/delete/warehouse/{id}', 'DeleteWarehouse')->name('delete.warehouse');  
 });
 
+});
+
+// Supplier Route 
+Route::controller(SupplierController::class)->group(function(){
+    Route::get('/all/supplier', 'AllSupplier')->name('all.supplier'); 
+    Route::get('/add/supplier', 'AddSupplier')->name('add.supplier');
+    Route::post('/store/supplier', 'StoreSupplier')->name('store.supplier');
+    Route::get('/edit/warehouse/{id}', 'EditWarehouse')->name('edit.warehouse');
+    Route::post('/update/warehouse', 'UpdateWarehouse')->name('update.warehouse');
+    Route::get('/delete/warehouse/{id}', 'DeleteWarehouse')->name('delete.warehouse');
 });

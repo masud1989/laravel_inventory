@@ -62,35 +62,49 @@
                                     </ul>
                                 </div>
                             </li>
-{{-- 
-                                <li>
-                                    <a href="#sidebarAuth" data-bs-toggle="collapse">
-                                        <i data-feather="users"></i>
-                                        <span> Warehouse Management </span>
-                                        <span class="menu-arrow"></span>
-                                    </a>
-                                    <div class="collapse" id="sidebarAuth">
-                                        <ul class="nav-second-level">
-                                            <li>
-                                                <a href="{{ route('all.warehouse') }}" class="tp-link">All Warehouse</a>
-                                                {{-- <a href="{{ route('all.brand') }}" class="tp-link">All Brand</a> --}}
-                                            {{--
-                                            </li>
-                                            <li>
-                                                <a href="{{ route('add.warehouse') }}" class="tp-link">Add New Warehouse</a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </li>
 
-                                 --}}
 
-                                 <li>
-                                <a href="{{ route('all.warehouse') }}" class="tp-link">
-                                    <i data-feather="calendar"></i>
-                                    <span> Manage Warehouse</span>
+                            <li>
+                                <a href="#sidebarAuth" data-bs-toggle="collapse">
+                                    <i data-feather="users"></i>
+                                    <span>Manage Supplier </span>
+                                    <span class="menu-arrow"></span>
                                 </a>
+                                <div class="collapse" id="sidebarAuth">
+                                    <ul class="nav-second-level">
+                                        <li>
+                                            <a href="{{ route('all.supplier') }}" class="tp-link">All Supplier</a>
+                                            {{-- <a href="{{ route('all.brand') }}" class="tp-link">All Brand</a> --}}
+                                        </li>
+                                        <li>
+                                            <a href="{{ route('add.supplier') }}" class="tp-link">Add New Supplier</a>
+                                        </li>
+                                    </ul>
+                                </div>
                             </li>
+
+
+                             <li>
+                                <a href="#WareHouse" data-bs-toggle="collapse">
+                                    <i data-feather="users"></i>
+                                    <span> WareHouse Manage </span>
+                                    <span class="menu-arrow"></span>
+                                </a>
+                                <div class="collapse" id="WareHouse">
+                                    <ul class="nav-second-level">
+                                <li>
+                                    <a href="{{ route('all.warehouse') }}" class="tp-link">All WareHouse</a>
+                            </li>   
+                                <li>
+                                    <a href="{{ route('add.warehouse') }}" class="tp-link">Add New WareHouse</a>
+                            </li>   
+                                            
+                                    </ul>
+                                </div>
+                            </li>
+
+                             
+
 
                             <li>
                                 <a href="#sidebarError" data-bs-toggle="collapse">
