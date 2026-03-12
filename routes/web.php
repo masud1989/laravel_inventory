@@ -32,8 +32,7 @@ Route::middleware('auth')->group(function () {
     Route::get('/edit/profile', [AdminController::class,'EditProfile'])->name('edit.profile');
     Route::post('/store/profile', [AdminController::class,'StoreProfile'])->name('store.profile');
     Route::post('/change/password', [AdminController::class,'ChangePassword'])->name('change.password');
-    Route::post('/update/password', [AdminController::class,'UpdatePassword'])->name('update.password');
-   
+    Route::post('/update/password', [AdminController::class,'UpdatePassword'])->name('update.password');   
 });
 
 // Brand Route 
@@ -42,6 +41,10 @@ Route::middleware('auth')->group(function () {
     Route::get('/all/brand', 'AllBrand')->name('all.brand');
     Route::get('/add/brand', 'AddBrand')->name('add.brand');
     Route::post('/store/brand', 'StoreBrand')->name('store.brand');
-   
+    Route::get('/edit/brand/{id}', 'EditBrand')->name('edit.brand');
+    Route::post('/update/brand', 'UpdateBrand')->name('update.brand');
+    Route::get('/delete/brand/{id}', 'DeleteBrand')->name('delete.brand');  
 });
+
+
 });

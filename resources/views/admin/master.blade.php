@@ -65,6 +65,8 @@
 
          <!-- Datatable Demo App Js -->
         <script src="{{ asset('admin/assets/js/pages/datatable.init.js') }}"></script>
+         <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script> 
+        <script src="{{ asset('admin/assets/js/delete_alert.js') }}"></script>
 
         <!-- App js-->
         <script src="{{asset('admin/assets/js/app.js')}} "></script>

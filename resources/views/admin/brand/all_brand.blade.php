@@ -48,8 +48,8 @@
                                     <td>{{ $item->name }}</td>
                                     <td><img src="{{ asset($item->image) }}" style="width: 70px; height:40px" alt=""></td>
                                     <td>
-                                        <a href="" class="btn btn-success btn-sm">Edit</a>
-                                        <a href="" class="btn btn-danger btn-sm">Delete</a>
+                                        <a href="{{ route('edit.brand', $item->id) }}" class="btn btn-success btn-sm">Edit</a>
+                                        <a href={{ route('delete.brand', $item->id) }} class="btn btn-danger btn-sm" id="delete">Delete</a>
                                     </td>
                                 </tr>   
                                 @endforeach
