@@ -56,30 +56,30 @@ class SupplierController extends Controller
             'name' => 'required|string|max:255',
             'email' => 'required|email|max:255',
             'phone' => 'nullable|string|max:20',
-            'city' => 'nullable|string|max:255',
+            'address' => 'nullable|string|max:255',
         ]);
 
-        Warehouse::find($ware_id)->update([
+        Supplier::find($supplier_id)->update([
             'name' => $validated['name'],
             'email' => $validated['email'],
             'phone' => $validated['phone'],
-            'city' => $validated['city'],
+            'address' => $validated['address'],
         ]);
 
         $notification = array(
-            'message' => 'Warehouse Updated Successfully',
+            'message' => 'Supplier Updated Successfully',
             'alert-type' => 'success'
          ); 
-         return redirect()->route('all.warehouse')->with($notification);
+         return redirect()->route('all.supplier')->with($notification);
 
     }
 
-    public function DeleteWarehouse($id){
+    public function DeleteSupplier($id){
 
-        Warehouse::find($id)->delete();
+        Supplier::find($id)->delete();
 
         $notification = array(
-            'message' => 'Warehouse Deleted Successfully',
+            'message' => 'Supplier Deleted Successfully',
             'alert-type' => 'success'
          ); 
          return redirect()->back()->with($notification); 

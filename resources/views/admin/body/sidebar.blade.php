@@ -45,7 +45,7 @@
                             <li class="menu-title">Pages</li>
 
                             <li>
-                                <a href="#sidebarAuth" data-bs-toggle="collapse">
+                                <a href="#sidebarAuth" >
                                     <i data-feather="users"></i>
                                     <span>Manage Brand </span>
                                     <span class="menu-arrow"></span>
@@ -104,6 +104,24 @@
                             </li>
 
                              
+                                 <li>
+                                <a href="#sidebarError" data-bs-toggle="collapse">
+                                    <i data-feather="alert-octagon"></i>
+                                    <span> Customer Manage</span>
+                                    <span class="menu-arrow"></span>
+                                </a>
+                                <div class="collapse" id="sidebarError">
+                                    <ul class="nav-second-level">
+                                        <li>
+                                            <a href="{{ route('add.customer') }}" class="tp-link">Add Customer </a>
+                                        </li>
+                                        <li>
+                                            <a href="{{ route('all.customer') }}" class="tp-link">All Customer</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+
 
 
                             <li>
@@ -142,82 +160,29 @@
                                 </a>
                             </li>
 
-                            <li class="menu-title mt-2">General</li>
+                            <li class="menu-title mt-2">Report Section</li>
 
                             <li>
                                 <a href="#sidebarBaseui" data-bs-toggle="collapse">
                                     <i data-feather="package"></i>
-                                    <span> Components </span>
+                                    <span> Reports </span>
                                     <span class="menu-arrow"></span>
                                 </a>
                                 <div class="collapse" id="sidebarBaseui">
                                     <ul class="nav-second-level">
                                         <li>
-                                            <a href="ui-accordions.html" class="tp-link">Accordions</a>
+                                            <a href="ui-accordions.html" class="tp-link">Maintenance Report-1</a>
                                         </li>
                                         <li>
-                                            <a href="ui-alerts.html" class="tp-link">Alerts</a>
+                                            <a href="ui-alerts.html" class="tp-link">Report-2</a>
                                         </li>
                                         <li>
-                                            <a href="ui-badges.html" class="tp-link">Badges</a>
+                                            <a href="ui-badges.html" class="tp-link">Report-3</a>
                                         </li>
                                         <li>
-                                            <a href="ui-breadcrumb.html" class="tp-link">Breadcrumb</a>
+                                            <a href="ui-breadcrumb.html" class="tp-link">Report-4</a>
                                         </li>
-                                        <li>
-                                            <a href="ui-buttons.html" class="tp-link">Buttons</a>
-                                        </li>
-                                        <li>
-                                            <a href="ui-cards.html" class="tp-link">Cards</a>
-                                        </li>
-                                        <li>
-                                            <a href="ui-collapse.html" class="tp-link">Collapse</a>
-                                        </li>
-                                        <li>
-                                            <a href="ui-dropdowns.html" class="tp-link">Dropdowns</a>
-                                        </li>
-                                        <li>
-                                            <a href="ui-video.html" class="tp-link">Embed Video</a>
-                                        </li>
-                                        <li>
-                                            <a href="ui-grid.html" class="tp-link">Grid</a>
-                                        </li>
-                                        <li>
-                                            <a href="ui-images.html" class="tp-link">Images</a>
-                                        </li>
-                                        <li>
-                                            <a href="ui-list.html" class="tp-link">List Group</a>
-                                        </li>
-                                        <li>
-                                            <a href="ui-modals.html" class="tp-link">Modals</a>
-                                        </li>
-                                        <li>
-                                            <a href="ui-placeholders.html" class="tp-link">Placeholders</a>
-                                        </li>
-                                        <li>
-                                            <a href="ui-pagination.html" class="tp-link">Pagination</a>
-                                        </li>
-                                        <li>
-                                            <a href="ui-popovers.html" class="tp-link">Popovers</a>
-                                        </li>
-                                        <li>
-                                            <a href="ui-progress.html" class="tp-link">Progress</a>
-                                        </li>
-                                        <li>
-                                            <a href="ui-scrollspy.html" class="tp-link">Scrollspy</a>
-                                        </li>
-                                        <li>
-                                            <a href="ui-spinners.html" class="tp-link">Spinners</a>
-                                        </li>
-                                        <li>
-                                            <a href="ui-tabs.html" class="tp-link">Tabs</a>
-                                        </li>
-                                        <li>
-                                            <a href="ui-tooltips.html" class="tp-link">Tooltips</a>
-                                        </li>
-                                        <li>
-                                            <a href="ui-typography.html" class="tp-link">Typography</a>
-                                        </li>
+                                        
                                     </ul>
                                 </div>
                             </li>

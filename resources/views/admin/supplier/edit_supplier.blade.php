@@ -16,7 +16,7 @@
             
                             <div class="text-end">
                                 <ol class="breadcrumb m-0 py-0">
-                                    <a href="{{ route('all.warehouse') }}" class="btn btn-secondary">All Warehouse</a>
+                                    <a href="{{ route('all.supplier') }}" class="btn btn-secondary">All Warehouse</a>
                                 </ol>
                             </div>
                         </div>
@@ -30,39 +30,39 @@
                                     </div><!-- end card header -->
         
                                     <div class="card-body">
-    <form action="{{ route('update.warehouse') }}" method="post" class="row g-3" enctype="multipart/form-data">
+    <form action="{{ route('update.supplier') }}" method="post" class="row g-3" enctype="multipart/form-data">
         @csrf
 
-        <input type="hidden" name="id" value="{{ $warehouse->id }}">
+        <input type="hidden" name="id" value="{{ $supplier->id }}">
 
         <div class="col-md-6">
-            <label for="validationDefault01" class="form-label">WareHouse Name</label>
-            <input type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ $warehouse->name }}" >
+            <label for="validationDefault01" class="form-label">Supplier Name</label>
+            <input type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ $supplier->name }}" >
             @error('name')
                 <div class="invalid-feedback">{{ $message }}</div>
             @enderror
         </div>
 
         <div class="col-md-6">
-            <label for="validationDefault01" class="form-label">WareHouse Email</label>
-            <input type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ $warehouse->email }}"  >
+            <label for="validationDefault01" class="form-label">Supplier Email</label>
+            <input type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ $supplier->email }}"  >
             @error('email')
                 <div class="invalid-feedback">{{ $message }}</div>
             @enderror
         </div>
 
         <div class="col-md-6">
-            <label for="validationDefault01" class="form-label">WareHouse Phone</label>
-            <input type="text" class="form-control @error('phone') is-invalid @enderror" name="phone"  value="{{ $warehouse->phone }}" >
+            <label for="validationDefault01" class="form-label">Supplier Phone</label>
+            <input type="text" class="form-control @error('phone') is-invalid @enderror" name="phone"  value="{{ $supplier->phone }}" >
             @error('phone')
                 <div class="invalid-feedback">{{ $message }}</div>
             @enderror
         </div>
 
         <div class="col-md-6">
-            <label for="validationDefault01" class="form-label">WareHouse City</label>
-            <input type="text" class="form-control @error('city') is-invalid @enderror" name="city" value="{{ $warehouse->city }}">
-            @error('city')
+            <label for="validationDefault01" class="form-label">Supplier Address</label>
+            <input type="text" class="form-control @error('address') is-invalid @enderror" name="address" value="{{ $supplier->address }}">
+            @error('address')
                 <div class="invalid-feedback">{{ $message }}</div>
             @enderror
         </div> 

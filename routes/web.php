@@ -6,6 +6,7 @@ use App\Http\Controllers\AdminController;
 use App\Http\Controllers\Admin\BrandController;
 use App\Http\Controllers\Admin\WarehouseController;
 use App\Http\Controllers\Admin\SupplierController;
+use App\Http\Controllers\Admin\CustomerController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -70,7 +71,19 @@ Route::controller(SupplierController::class)->group(function(){
     Route::get('/all/supplier', 'AllSupplier')->name('all.supplier'); 
     Route::get('/add/supplier', 'AddSupplier')->name('add.supplier');
     Route::post('/store/supplier', 'StoreSupplier')->name('store.supplier');
-    Route::get('/edit/warehouse/{id}', 'EditWarehouse')->name('edit.warehouse');
-    Route::post('/update/warehouse', 'UpdateWarehouse')->name('update.warehouse');
-    Route::get('/delete/warehouse/{id}', 'DeleteWarehouse')->name('delete.warehouse');
+    Route::get('/edit/supplier/{id}', 'EditSupplier')->name('edit.supplier');
+    Route::post('/update/supplier', 'UpdateSupplier')->name('update.supplier');
+    Route::get('/delete/supplier/{id}', 'DeleteSupplier')->name('delete.supplier');
+});
+
+
+
+// Customer Route 
+Route::controller(CustomerController::class)->group(function(){
+    Route::get('/all/customer', 'AllCustomer')->name('all.customer'); 
+    Route::get('/add/customer', 'AddCustomer')->name('add.customer');
+    Route::post('/store/customer', 'StoreCustomer')->name('store.customer');
+    Route::get('/edit/customer/{id}', 'EditCustomer')->name('edit.customer');
+    Route::post('/update/customer', 'UpdateCustomer')->name('update.customer');
+    Route::get('/delete/customer/{id}', 'DeleteCustomer')->name('delete.customer');
 });
